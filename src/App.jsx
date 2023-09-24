@@ -24,27 +24,32 @@ export default function App() {
   const testimonials = [
     {
       avatar: avatarIImg,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique praesentium voluptate natus sunt, molestiae dolorum?",
+      name: "hannah Doe",
+      text: "Your focus should include creating communities outside of your site for people to connect with you, your products, and others within the community.",
       rating: 4
     },
     {
       avatar: avatarIIImg,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, animi libero facere eligendi illo consectetur!",
+      name: "Jane Smith",
+      text: "The customer's perception is your reality.",
       rating: 3
     },
     {
       avatar: avatarIIIImg,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt id quaerat, quas minus cum provident?",
+      name: "Mike Johnson",
+      text: "I believe customer service doesn't cost — it pays.",
       rating: 5
     },
     {
       avatar: avatarIVImg,
-      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque culpa suscipit, ad iure esse nihil?",
-      rating: 2
+      name: "Emily Davis",
+      text: "Customer service means servicing customers, and it's so much more than just solving problems or addressing complaints.",
+      rating: 4
     },
     {
       avatar: avatarVImg,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta, quibusdam dolor eligendi quaerat nulla.",
+      name: "Alex Wilson",
+      text: "It comes down to how your customer experiences the brand – and how that brand makes a person feel.",
       rating: 4
     },
   ];
@@ -75,7 +80,7 @@ export default function App() {
         <div className="main">
           <div className="head-p">
             <span style={{ paddingRight: "5px" }}>WHAT OUR </span>
-            <span style={{ color: "#1D8BA0" }}> COUSTEMERS SAY</span>
+            <span style={{ color: "#1D8BA0" }}>CUSTOMERS SAY</span>
           </div>
           <div className="head">TESTIMONIALS</div>
           <Swiper
@@ -122,6 +127,7 @@ export default function App() {
                     />
                   </div>
                   <p>{testimonial.text}</p>
+                  <div className="customer-name">{testimonial.name}</div>
                   <div className="rating">{renderStars(testimonial.rating)}</div>
                 </div>
               </SwiperSlide>
